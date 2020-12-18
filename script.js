@@ -22,10 +22,11 @@
     }
 
     function draw() {
-        // make sure we're really full screen
+        // make sure we're really full screen, then hide mouse cursos
         if (canvas.width !== canvas.clientWidth || canvas.height !== canvas.clientHeight) {
             canvas.width = canvas.clientWidth;
-            canvas.height = canvas.clientHeight;
+            canvas.height = canvas.clientHeight;            
+            canvas.style.cursor = 'none';
         }
 
         // clearRect is not needed because we fill the entire canvas in next statement
